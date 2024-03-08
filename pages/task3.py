@@ -58,32 +58,32 @@ prompt = st.text_area("Enter your prompt:")
 max_length = st.slider("Max length of generated text:", min_value=10, max_value=500, value=100, step=10)
 num_generations = st.slider("Number of generations:", min_value=1, max_value=10, value=3, step=1)
 temperature = st.slider("Temperature:", min_value=0.1, max_value=2.0, value=1.0, step=0.1)
-try:
-    if st.button("Generate text"):
-        start_time = time.time()
-        generated_texts = generate_text(model, tokenizer, prompt, max_length, num_generations, temperature)
-        end_time = time.time()
 
-        st.subheader("Сгенерированный текст:")
-        for i, text in enumerate(generated_texts, start=1):
-            st.write(f"Генерация {i}:\n{text}")
+if st.button("Generate text"):
+    start_time = time.time()
+    generated_texts = generate_text(model, tokenizer, prompt, max_length, num_generations, temperature)
+    end_time = time.time()
 
-        generation_time = end_time - start_time
-        st.write(f"\nВремя генерации: {generation_time:.2f} секунд")
+    st.subheader("Сгенерированный текст:")
+    for i, text in enumerate(generated_texts, start=1):
+        st.write(f"Генерация {i}:\n{text}")
 
-    st.markdown(button_style, unsafe_allow_html=True)  # Применяем стиль к кнопке
-    st.markdown(
-        """
-        <style>
-            div[data-baseweb="textarea"] {
-                border: 2px solid #3498db;  /* Цвет границы */
-                border-radius: 5px;  /* Закругленные углы */
-                background-color: #ecf0f1;  /* Цвет фона */
-                padding: 10px;  /* Поля вокруг текстового поля */
-            }
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
-except:
-    st.write('Модель в разработке ( ﾉ ﾟｰﾟ)ﾉ( ﾉ ﾟｰﾟ)ﾉ( ﾉ ﾟｰﾟ)ﾉ( ﾉ ﾟｰﾟ)ﾉ')  
+    generation_time = end_time - start_time
+    st.write(f"\nВремя генерации: {generation_time:.2f} секунд")
+
+st.markdown(button_style, unsafe_allow_html=True)  # Применяем стиль к кнопке
+st.markdown(
+    """
+    <style>
+        div[data-baseweb="textarea"] {
+            border: 2px solid #3498db;  /* Цвет границы */
+            border-radius: 5px;  /* Закругленные углы */
+            background-color: #ecf0f1;  /* Цвет фона */
+            padding: 10px;  /* Поля вокруг текстового поля */
+        }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+# except:
+#     st.write('Модель в разработке ( ﾉ ﾟｰﾟ)ﾉ( ﾉ ﾟｰﾟ)ﾉ( ﾉ ﾟｰﾟ)ﾉ( ﾉ ﾟｰﾟ)ﾉ')  
