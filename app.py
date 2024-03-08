@@ -9,8 +9,6 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-'''
-
 st.title('📝 &  ⚡💨🍃🪫💡')
 st.title('AI-Apps for NLP tasks')
 
