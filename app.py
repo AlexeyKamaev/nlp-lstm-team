@@ -9,7 +9,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-st.title('📝 &  ⚡💨🍃🪫💡')
+st.title('Обработка естественного языка • Natural Language Processing')
 st.title('AI-Apps for NLP tasks')
 
 
