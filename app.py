@@ -13,11 +13,6 @@ st.markdown("""
 
 st.title('📝 &  ⚡💨🍃🪫💡')
 st.title('AI-Apps for NLP tasks')
-# st.markdown(f'''Here you can
-# 🎥 Define sentiment of film review
-# ☠️ Access message toxicity
-# 📲 Generate some texts using your prompt'''
-# )
 
 
 st.write('Choose app below')
