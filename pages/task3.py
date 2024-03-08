@@ -8,7 +8,7 @@ def generate_text(model, tokenizer, prompt, max_length, num_generations, tempera
 
     for _ in range(num_generations):
         input_ids = tokenizer.encode(prompt, return_tensors="pt")
-        output = model.generate(
+        output = model(
             input_ids,
             max_length=max_length,
             temperature=temperature,
