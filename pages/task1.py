@@ -98,10 +98,10 @@ else:
         st.write(f'время = {round(times[0],3)}c, f1-score = 0.64')
 
         d[res2](f'Предсказание 2-й модели: {di[res2]}')
-        st.write(f'время = {round(times[0],3)}c, f1-score = 0.70')
+        st.write(f'время = {round(times[1],3)}c, f1-score = 0.70')
 
         d[res3](f'Предсказание 3-й модели: {di[res3]}')
-        st.write(f'время = {round(times[0],3)}c, f1-score = 0.66')
+        st.write(f'время = {round(times[2],3)}c, f1-score = 0.66')
 
 
         plt.figure(figsize=(8, 8))
